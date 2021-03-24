@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+.bigImage {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(255, 166, 32, 0.65) 0%, rgba(255, 255, 255, 0) 100%), url("./images/bgImageZenazia.jpg");
+    background-size: cover;
+}
+.bigImage .menu {
+    height: 5vh;
+}
+.bigImage .logo {
+    position: absolute;
+    top: 1vh;
+    left: 8vh;
+}
+.bigImage .logo img {
+    width: 334px;
+    height: 95px;
+}
+.bigImage .main-navigation .menu-menu-header-container ul#primary-menu {
+    position: relative;
+    flex-direction: row;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 30%;
+    padding-top: 20px;
+}
+.bigImage .main-navigation .menu-menu-header-container ul#primary-menu::after {
+    position: absolute;
+    bottom: 10px;
+    content: "";
+    height: 2px;
+    width: 120%;
+    background-color: #F5F5F5;
+    left: -10%;
+    right: 0;
+}
+.bigImage .main-navigation .menu-menu-header-container ul#primary-menu li a {
+    color: #F5F5F5;
+    font-weight: 400;
+    font-size: 22px;
+    text-decoration: none;
+}
+.bigImage .main-navigation .menu-menu-header-container ul#primary-menu li a:hover {
+    position: relative;
+    color: #712c2d;
+    font-weight: 500;
+}
+.bigImage .main-navigation .menu-menu-header-container ul#primary-menu li a:hover::after {
+    z-index: 2;
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -15px;
+    height: 2px;
+    width: 100%;
+    background-color: #712c2d;
+}
+.bigImage .main-navigation .menu-menu-header-container ul#primary-menu li.current_page_item a {
+    position: relative;
+    color: #712c2d;
+    font-weight: 500;
+}
+.bigImage .main-navigation .menu-menu-header-container ul#primary-menu li.current_page_item a::after {
+    z-index: 2;
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -15px;
+    height: 2px;
+    width: 100%;
+    background-color: #712c2d;
+}
+.bigImage .introduction {
+    font-weight: 300;
+    position: absolute;
+    left: 5%;
+    bottom: 20%;
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+}
+.bigImage .introduction .firstIntroText {
+    line-height: 30px;
+    font-size: 26px;
+    color: #F5F5F5;
+}
+.bigImage .introduction .secondIntroText {
+    line-height: 30px;
+    margin-top: 50px;
+    font-size: 26px;
+    color: #F5F5F5;
+}
+.bigImage .introduction .discoverButtons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.bigImage .introduction .discoverButtons a {
+    display: flex;
+    text-decoration: none;
+    height: 40px;
+    width: 180px;
+    border-radius: 5px;
+    background: #712c2d;
+    color: #F5F5F5;
+    font-size: 22px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: background .3s ease-in-out;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.75);
+    position: relative;
+    overflow: hidden;
+}
+.bigImage .introduction .discoverButtons a:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: #F5F5F5;
+    height: 3px;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.bigImage .introduction .discoverButtons a:hover:before, .bigImage .introduction .discoverButtons a:focus:before, .bigImage .introduction .discoverButtons a:active:before {
+    right: 0;
+}
+.bigImage .introduction .discoverButtons a:first-child {
+    margin-right: 18px;
+}
+.bigImage .dragonZenazia {
+    font-weight: 400;
+    color: #fff;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    text-align: center;
+}
+#restaurants {
+    padding: 3% 5vw 0 5vw;
+    margin: 0 auto;
+    position: relative;
+    background-color: #fce9c9;
+}
+#restaurants h2 {
+    color: #712c2d;
+    font-weight: 500;
+    font-size: 28px;
+}
+section#restaurants .chopsticksImg {
+    z-index: 0;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    height: 100vh;
+    width: 100vh;
+    background: url("./images/chopsticks.png") no-repeat;
+    opacity: 0.7;
+}
+section#restaurants #balma {
+    position: relative;
+    padding-top: 5%;
+}
+section#restaurants #balma .leftContent {
+    background-color: #fff;
+    position: absolute;
+    top: 30%;
+    left: 8%;
+    padding: 20px 20px;
+    width: 30%;
+    box-shadow: 6px 6px 10px 0px rgba(50, 50, 50, 0.75);
+    border-radius: 10px;
+}
+section#restaurants #balma .leftContent::after {
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 35%;
+    background: url("./images/bamboo.png") no-repeat;
+}
+section#restaurants #balma .rightImg {
+    margin-left: 35%;
+    height: 60vh;
+    width: 1024px;
+    background: url("./images/zenaziabalma.png") no-repeat;
+    box-shadow: 8px 8px 8px 0 rgba(50, 50, 50, 0.75);
+}
+
