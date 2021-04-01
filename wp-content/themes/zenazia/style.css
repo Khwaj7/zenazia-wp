@@ -25,10 +25,6 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1;
-}
 ol, ul {
     list-style: none;
 }
@@ -44,12 +40,17 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
+    background-color: #fce9c9;
+    overflow-x: hidden;
 }
 .bigImage {
     position: relative;
@@ -58,7 +59,7 @@ body {
     background-size: cover;
 }
 .bigImage .menu {
-    height: 5vh;
+    height: 50px;
 }
 .bigImage .logo {
     position: absolute;
@@ -104,7 +105,7 @@ body {
     position: absolute;
     content: "";
     left: 0;
-    bottom: -15px;
+    bottom: -13px;
     height: 2px;
     width: 100%;
     background-color: #712c2d;
@@ -119,7 +120,7 @@ body {
     position: absolute;
     content: "";
     left: 0;
-    bottom: -15px;
+    bottom: -13px;
     height: 2px;
     width: 100%;
     background-color: #712c2d;
@@ -200,56 +201,451 @@ body {
     right: 5%;
     text-align: center;
 }
-#restaurants {
-    padding: 3% 5vw 0 5vw;
+section#restaurants {
+    padding: 3% 5vw 5% 5vw;
     margin: 0 auto;
     position: relative;
-    background-color: #fce9c9;
-}
-#restaurants h2 {
-    color: #712c2d;
-    font-weight: 500;
-    font-size: 28px;
 }
 section#restaurants .chopsticksImg {
-    z-index: 0;
+    z-index: -1;
     position: absolute;
     top: 15%;
     left: 5%;
     height: 100vh;
     width: 100vh;
     background: url("./images/chopsticks.png") no-repeat;
-    opacity: 0.7;
+    opacity: 0.45;
 }
-section#restaurants #balma {
+section#restaurants #balma h2 {
+    padding-bottom: 3%;
+    width: 100%;
+    color: #712c2d;
+    font-weight: 500;
+    font-size: 28px;
+    text-align: center;
+}
+section#restaurants #balma .balmaContent {
     position: relative;
-    padding-top: 5%;
+    display: flex;
+    flex-direction: row;
 }
-section#restaurants #balma .leftContent {
+section#restaurants #balma .balmaContent .leftContent {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+section#restaurants #balma .balmaContent .leftContent .timetable {
+    display: flex;
+    flex-direction: column;
+}
+section#restaurants #balma .balmaContent .leftContent .timetable .card-timetable {
+    height: 50px;
+    width: 200px;
+    background: #fff;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    box-shadow: 5px 5px 5px 0px rgba(32, 33, 36, .28);
+    margin: 10px auto 10px auto;
+    justify-content: left;
+    font-weight: 500;
+}
+section#restaurants #balma .balmaContent .rightContent .timetable .card-timetable {
+    height: 50px;
+    width: 200px;
+    background: #fff;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    box-shadow: 5px 5px 5px 0px rgba(32, 33, 36, .28);
+    justify-content: right;
+    font-weight: 500;
+}
+section#restaurants #balma .balmaContent .leftContent .timetable .card-timetable .hours {
+    display: flex;
+    flex-direction: column;
+}
+section#restaurants #balma .balmaContent .leftContent .timetable .card-timetable .letter-timetable {
+    border-radius: 50%;
+    background: #712c2d;
+    color: #F5F5F5;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    margin-left: 10px;
+}
+section#restaurants .leftContent .timetable .card-timetable .time-timetable {
+    margin-left: 10px;
+}
+section#restaurants #balma .balmaContent .rightContent {
+    position: relative;
+    width: 60%;
+}
+section#restaurants #balma .balmaContent .rightContent .rightImg {
+    height: 60vh;
+    width: 1024px;
+    background: url("./images/zenaziabalma.png") no-repeat;
+    box-shadow: 5px 5px 5px 0px rgba(32, 33, 36, .28);
+}
+section#restaurants #balma .balmaContent .rightContent .rightTxt {
     background-color: #fff;
-    position: absolute;
-    top: 30%;
-    left: 8%;
-    padding: 20px 20px;
-    width: 30%;
-    box-shadow: 6px 6px 10px 0px rgba(50, 50, 50, 0.75);
+    position: relative;
+    height: 220px;
+    padding: 20px;
+    width: 60%;
+    margin: -80px auto 0 auto;
+    box-shadow: 5px 5px 5px 0px rgba(32, 33, 36, .28);
     border-radius: 10px;
+    z-index: 1;
 }
-section#restaurants #balma .leftContent::after {
+section#restaurants #balma .balmaContent .rightContent .rightTxt::after {
     height: 100%;
     width: 100%;
-    opacity: 0.5;
+    opacity: 0.3;
     content: "";
     position: absolute;
+    z-index: -1;
     top: 0;
     left: 35%;
     background: url("./images/bamboo.png") no-repeat;
 }
-section#restaurants #balma .rightImg {
-    margin-left: 35%;
-    height: 60vh;
-    width: 1024px;
-    background: url("./images/zenaziabalma.png") no-repeat;
-    box-shadow: 8px 8px 8px 0 rgba(50, 50, 50, 0.75);
+section#restaurants #balma .balmaContent .rightContent .rightTxt .rightTxtPhone, section#restaurants #balma .balmaContent .rightContent .rightTxt .rightTxtAddress {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+section#restaurants #balma .balmaContent .rightContent .rightTxt .rightTxtPhone img, section#restaurants #balma .balmaContent .rightContent .rightTxt .rightTxtAddress img {
+    padding-right: 5px;
+}
+section#restaurants #balma .balmaContent .rightContent .rightTxt .bottomRightTxt {
+    display: flex;
+    flex-direction: row;
 }
 
+section#restaurants #balma .balmaContent .rightContent .rightTxt .bottomRightTxt .link-services {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-top: 15px;
+    justify-content: space-around;
+}
+section#restaurants #balma .balmaContent .rightContent .rightTxt .bottomRightTxt .TA_cdsratingsonlynarrow {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+}
+/********************** QUINT *******************/
+section#restaurants #quint {
+    margin-top: 5%;
+}
+section#restaurants #quint h2 {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    width: 100%;
+    color: #712c2d;
+    font-weight: 500;
+    font-size: 28px;
+    text-align: center;
+}
+section#restaurants #quint .quintContent {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+section#restaurants #quint .hatImg {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    height: 650px;
+    width: 100vh;
+    background: url("./images/hat.png") no-repeat;
+    opacity: 0.35;
+    z-index: -1;
+}
+section#restaurants #quint .quintContent .leftContent {
+    width: 60%;
+}
+section#restaurants #quint .quintContent .leftContent .leftImg {
+    height: 60vh;
+    width: 1024px;
+    background: url("./images/zenaziaquint.jpg") no-repeat;
+    background-position: right;
+    box-shadow: 5px 5px 5px 0 rgba(32, 33, 36, .28);
+}
+section#restaurants #quint .quintContent .leftContent .leftTxt {
+    background-color: #fff;
+    position: relative;
+    height: 235px;
+    padding: 20px;
+    width: 60%;
+    margin: -80px auto 0 auto;
+    box-shadow: 5px 5px 5px 0px rgba(32, 33, 36, .28);
+    border-radius: 10px;
+    z-index: 1;
+}
+section#restaurants #quint .quintContent .leftContent .leftTxt .leftTxtPhone, section#restaurants #quint .quintContent .leftContent .leftTxt .leftTxtAddress {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+section#restaurants #quint .quintContent .leftContent .leftTxt .leftTxtAddress span {
+    overflow-wrap: break-word;
+    width: 50%;
+}
+section#restaurants #quint .quintContent .leftContent .leftTxt .bottomLeftTxt {
+    display: flex;
+    flex-direction: row;
+}
+section#restaurants #quint .quintContent .leftContent .leftTxt .bottomLeftTxt .link-services {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-top: 15px;
+    justify-content: space-around;
+}
+section#restaurants #quint .quintContent .leftContent .leftTxt::after {
+    height: 100%;
+    width: 100%;
+    opacity: 0.3;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 35%;
+    background: url("./images/bamboo.png") no-repeat;
+}
+section#restaurants #quint .quintContent .rightContent {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+section#restaurants #quint .quintContent .rightContent .timetable {
+    display: flex;
+    flex-direction: column;
+}
+section#restaurants #quint .quintContent .rightContent .timetable .card-timetable {
+    height: 50px;
+    width: 200px;
+    background: #fff;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    box-shadow: 5px 5px 5px 0px rgba(32, 33, 36, .28);
+    margin: 10px auto 10px auto;
+    justify-content: left;
+    font-weight: 500;
+}
+section#restaurants #quint .quintContent .rightContent .timetable .card-timetable .letter-timetable {
+    border-radius: 50%;
+    background: #712c2d;
+    color: #F5F5F5;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+section#restaurants #quint .quintContent .rightContent .timetable .card-timetable .letter-timetable {
+    border-radius: 50%;
+    background: #712c2d;
+    color: #F5F5F5;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    margin-left: 10px;
+}
+section#restaurants #quint .quintContent .rightContent .timetable .card-timetable .hours {
+    display: flex;
+    flex-direction: column;
+}
+section#restaurants #quint .quintContent .rightContent .timetable .card-timetable .time-timetable {
+    margin-left: 10px;
+}
+/********************** FOOTER *******************/
+footer.site-footer {
+    position: relative;
+    color: #F5F5F5;
+    background-color: #382a2b;
+    border-top: solid 5px #712c2d;
+    font-weight: 300;
+    padding: 25px 5% 0 5%;
+}
+footer.site-footer .site-info .upperFooter {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+footer.site-footer .site-info .upperFooter .menu-footer {
+    display: flex;
+    flex: 1 1 10%;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+}
+footer.site-footer .site-info .upperFooter .menu-footer h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+footer.site-footer .site-info .upperFooter .contact {
+    align-items: center;
+    display: flex;
+    flex: 1 1 30%;
+    flex-direction: column;
+    padding: 25px;
+}
+footer.site-footer .site-info .upperFooter .contact h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+footer.site-footer .site-info .upperFooter .contact a {
+    text-decoration: none;
+    color: #f5f5f5;
+}
+footer.site-footer .site-info .upperFooter .contact a:hover {
+    text-decoration: underline;
+}
+footer.site-footer .site-info .upperFooter .contact .contactBalma {
+    position: relative;
+    margin-bottom: 20px;
+}
+footer.site-footer .site-info .upperFooter .contact .contactBalma::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: 1px;
+    background-color: #F5F5F5;
+}
+footer.site-footer .site-info .upperFooter .outro {
+    font-style: italic;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    flex: 1 1 25%;
+    flex-direction: column;
+}
+footer.site-footer .site-info .upperFooter .outro h3 {
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+footer.site-footer .site-info ul#footer-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+footer.site-footer .site-info ul#footer-menu li a {
+    color: #F5F5F5;
+    text-decoration: none;
+}
+footer.site-footer .site-info ul#footer-menu li a:hover {
+    text-decoration: underline;
+}
+footer.site-footer .site-info .socialMedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px 0;
+}
+footer.site-footer .site-info .socialMedia a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #F5F5F5;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 0 10px;
+}
+footer.site-footer .site-info .socialMedia a span {
+    margin-top: 5px;
+}
+footer.site-footer .site-info p.copyright {
+    font-size: 14px;
+    font-style: italic;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer.site-footer .site-info svg.logoKSE {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    height: 30px;
+}
+button#scrollToTop {
+    color: #712c2d;
+    font-size: 50px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    background-color: #fce9c9;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    flex: 1;
+    border: solid 2px #712c2d;
+    justify-content: center;
+    margin: auto 0;
+    bottom: 0;
+}
+/********************** DOORS *******************/
+#leftdoor {
+    content:'';
+    top: 0;
+    left: 0;
+    position: fixed;
+    height: 100%;
+    width: 50%;
+    background-image: url('./images/porte_gauche.jpg');
+    background-size: cover;
+    background-position: right;
+    animation: left-to-right 4.5s ease-out 1s forwards;
+    z-index: 3;
+}
+
+#rightdoor {
+    content:'';
+    top: 0;
+    right: 0;
+    position: fixed;
+    height: 100%;
+    width: 50%;
+    background-image: url('./images/porte_droite.jpg');
+    background-size: cover;
+    background-position: left;
+    animation: right-to-left 4.5s ease-out 1s forwards;
+    z-index: 3;
+}
+
+@keyframes left-to-right{
+    from{left: 0}
+    to{left: -100%}
+}
+
+@keyframes right-to-left{
+    from{right: 0}
+    to{right: -100%}
+}
