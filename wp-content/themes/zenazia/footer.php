@@ -59,7 +59,7 @@
 			</a>
 		</div>-->
 		<svg class="logoKSE" id="Lines" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 143.73 285.58"><defs><style>.cls-1{fill:none;stroke:#FFF;stroke-linecap:round;stroke-miterlimit:10;stroke-width:10px;}</style></defs><title>KSE_A2</title><line class="cls-1" x1="1" y1="142.85" x2="142.73" y2="1.12"/><line class="cls-1" x1="1" y1="1.12" x2="1" y2="284.58"/><line class="cls-1" x1="142.73" y1="284.58" x2="1" y2="142.85"/><path class="cls-1" d="M470.87,158.27c-14.54.36-26.43.21-34.71,0-6.84-.18-16.61-.14-36.16,0a71.33,71.33,0,0,0-13.22,1.23,70.83,70.83,0,0,0-28.33,12.22A71.08,71.08,0,0,0,334,203.3a71,71,0,0,0,2.59,57.48,71.83,71.83,0,0,0,22.58,26.27,70.9,70.9,0,0,0,18.6,9.39,61.93,61.93,0,0,0,13,3c.75.08,3.59.26,9.26.6,8.22.5,8.8.5,10.68.8,4.32.7,8.81,1.94,9.16,2,0,0,.68.17,1.29.36a70.91,70.91,0,0,1,11.28,130.7A72.67,72.67,0,0,1,400,441.73" transform="translate(-328.13 -157.15)"/><line class="cls-1" x1="142.73" y1="284.58" x2="1" y2="284.58"/><line class="cls-1" x1="142.73" y1="142.85" x2="1" y2="142.85"/><line class="cls-1" x1="1" y1="1.12" x2="142.73" y2="1.12"/></svg>
-		<p class="copyright"><?php echo the_field("footer_copyright") . ' ' . current_time('Y'); ?></p>
+		<p class="copyright"><?php echo the_field("footer_copyright") . ' ' . current_time('Y'); ?> - <a href="">KSE</a></p>
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->
 </div><!-- #page -->

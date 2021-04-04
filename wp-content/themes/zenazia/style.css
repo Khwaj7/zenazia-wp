@@ -58,19 +58,20 @@ body {
     background: linear-gradient(180deg, rgba(255, 166, 32, 0.65) 0%, rgba(255, 255, 255, 0) 100%), url("./images/bgImageZenazia.jpg");
     background-size: cover;
 }
-.bigImage .menu {
+.menu-header {
+    position: relative;
     height: 50px;
 }
-.bigImage .logo {
+.logoZenazia {
     position: absolute;
     top: 1vh;
     left: 8vh;
 }
-.bigImage .logo img {
+.logoZenazia img {
     width: 334px;
     height: 95px;
 }
-.bigImage .main-navigation .menu-menu-header-container ul#primary-menu {
+.main-navigation .menu-menu-header-container ul#primary-menu {
     position: relative;
     flex-direction: row;
     display: flex;
@@ -79,9 +80,9 @@ body {
     width: 30%;
     padding-top: 20px;
 }
-.bigImage .main-navigation .menu-menu-header-container ul#primary-menu::after {
+.main-navigation .menu-menu-header-container ul#primary-menu::after {
     position: absolute;
-    bottom: 10px;
+    bottom: -13px;
     content: "";
     height: 2px;
     width: 120%;
@@ -89,18 +90,18 @@ body {
     left: -10%;
     right: 0;
 }
-.bigImage .main-navigation .menu-menu-header-container ul#primary-menu li a {
+.main-navigation .menu-menu-header-container ul#primary-menu li a {
     color: #F5F5F5;
     font-weight: 400;
     font-size: 22px;
     text-decoration: none;
 }
-.bigImage .main-navigation .menu-menu-header-container ul#primary-menu li a:hover {
+.main-navigation .menu-menu-header-container ul#primary-menu li a:hover {
     position: relative;
     color: #712c2d;
     font-weight: 500;
 }
-.bigImage .main-navigation .menu-menu-header-container ul#primary-menu li a:hover::after {
+.main-navigation .menu-menu-header-container ul#primary-menu li a:hover::after {
     z-index: 2;
     position: absolute;
     content: "";
@@ -110,12 +111,23 @@ body {
     width: 100%;
     background-color: #712c2d;
 }
-.bigImage .main-navigation .menu-menu-header-container ul#primary-menu li.current_page_item a {
+.main-navigation .menu-menu-header-container ul#primary-menu li.current_page_item a {
     position: relative;
     color: #712c2d;
     font-weight: 500;
 }
-.bigImage .main-navigation .menu-menu-header-container ul#primary-menu li.current_page_item a::after {
+.main-navigation .menu-menu-header-container ul#primary-menu li.current_page_item.menu-item-155 a {
+    color: #F5F5F5;
+    font-weight: 400;
+    font-size: 22px;
+    text-decoration: none;
+}
+.main-navigation .menu-menu-header-container ul#primary-menu li.current_page_item.menu-item-155 a::after {
+    position: absolute;
+    content: "";
+    background: transparent;
+}
+.main-navigation .menu-menu-header-container ul#primary-menu li.current_page_item a::after {
     z-index: 2;
     position: absolute;
     content: "";
@@ -477,6 +489,122 @@ section#restaurants #quint .quintContent .rightContent .timetable .card-timetabl
 section#restaurants #quint .quintContent .rightContent .timetable .card-timetable .time-timetable {
     margin-left: 10px;
 }
+/********************** CONTACT *******************/
+body.page-template-template-contact .menu-header {
+    height: 100px;
+    background-color: #382a2b;
+    border-bottom: solid 5px #712c2d;
+    position: relative;
+}
+body.page-template-template-contact .logoSmall img {
+    position: absolute;
+    top: 20px;
+    left: 5vh;
+    z-index: 1;
+    height: 50px;
+    width: auto;
+}
+body.page-template-template-contact .container h1 {
+    padding: 30px 0;
+    width: 100%;
+    color: #712c2d;
+    font-weight: 500;
+    font-size: 28px;
+    text-align: center;
+}
+body.page-template-template-contact .container p.contactIntro {
+    text-align: center;
+    overflow-wrap: break-word;
+    width: 30%;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    color: #712c2d;
+    font-size: 17px;
+}
+body.page-template-template-contact .container form {
+    width: 40%;
+    margin: 0 auto;
+}
+body.page-template-template-contact .container form .rowContentForm {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin-bottom: 25px;
+}
+body.page-template-template-contact .container form input[type="text"],
+body.page-template-template-contact .container form input[type="tel"],
+body.page-template-template-contact .container form input[type="email"] {
+    font-family: 'Roboto';
+    background: transparent;
+    height: 40px;
+    width: 300px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: solid 2px #712c2d;
+    margin: 5px 0;
+    color: #712c2d;
+    font-size: 15px;
+}
+body.page-template-template-contact .container form input[type="text"]::placeholder,
+body.page-template-template-contact .container form input[type="tel"]::placeholder,
+body.page-template-template-contact .container form input[type="email"]::placeholder,
+body.page-template-template-contact .container form textarea::placeholder {
+    font-family: 'Roboto';
+    font-size: 15px;
+}
+body.page-template-template-contact .container form textarea::placeholder {
+    font-family: 'Roboto';
+}
+body.page-template-template-contact .container form .footerContentForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+body.page-template-template-contact .container form textarea {
+    font-family: 'Roboto';
+    background: transparent;
+    padding-top: 10px;
+    height: auto;
+    width: 300px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: solid 2px #712c2d;
+    margin: 5px 0;
+    color: #712c2d;
+    font-size: 15px;
+
+}
+body.page-template-template-contact .container form input[type="submit"] {
+    background: transparent;
+    font-weight: 500;
+    font-family: 'Roboto';
+    margin-bottom: 25px;
+    font-size: 16px;
+    width: 150px;
+    height: 40px;
+    color: #712c2d;
+    border: solid 2px #712c2d;
+    border-radius: 5px;
+}
+body.page-template-template-contact .container form input[type="submit"]:hover {
+    background: #712c2d;
+    color: #F5F5F5;
+    border: solid 2px #F5F5F5;
+    cursor: pointer;
+}
+body.page-template-template-contact footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+body.page-template-template-contact button#scrollToTop {
+    display: none;
+}
 /********************** FOOTER *******************/
 footer.site-footer {
     position: relative;
@@ -587,6 +715,10 @@ footer.site-footer .site-info p.copyright {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+footer.site-footer .site-info p.copyright a {
+    padding-left: 5px;
+    color: #fff;
 }
 footer.site-footer .site-info svg.logoKSE {
     position: absolute;

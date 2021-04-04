@@ -8,8 +8,8 @@ get_header();
     <section id="accueil">
         <div class="container">
             <div class="bigImage">
-                <div class="menu">
-                    <div class="logo">
+                <div class="menu-header">
+                    <div class="logoZenazia">
                         <img src="<?php bloginfo('template_url'); ?>/images/logoZenazia.png" />
                     </div>
                     <nav id="site-navigation" class="main-navigation">
@@ -50,7 +50,7 @@ get_header();
     <section id="restaurants">
         <div class="chopsticksImg"></div>
         <section id="balma">
-            <h2>Restaurant de Balma</h2>
+            <h2><?php echo get_field("titre_restaurant_de_balma"); ?></h2>
             <div class="balmaContent">
                 <div class="leftContent">
                     <ul class="timetable">
@@ -93,19 +93,14 @@ get_header();
                                 <a target="_blank" href="https://www.ubereats.com/fr/toulouse/food-delivery/zenazia/rFbZ9WqgSXGgYxPnIWvHLA"><img src="<?php bloginfo('template_url'); ?>/images/logoUber.svg" width="120px" /></a>
                                 <a target="_blank" href="https://deliveroo.fr/fr/menu/toulouse/roserai-juncasse-argoulets/zenazia-toulouse-balma"><img src="<?php bloginfo('template_url'); ?>/images/logoDeliveroo.svg" width="120px" /></a>
                             </div>
-                            <div id="TA_cdsratingsonlynarrow907" class="TA_cdsratingsonlynarrow">
-                                <ul id="8mMlRst" class="TA_links W5LYgaC9">
-                                    <li id="Z5R2Qvuai" class="m8lENNOEweOe"><a target="_blank" href="https://www.tripadvisor.fr/Restaurant_Review-g187175-d967665-Reviews-Zenazia-Toulouse_Haute_Garonne_Occitanie.html"><img src="https://www.tripadvisor.fr/img/cdsi/img2/branding/v2/Tripadvisor_lockup_horizontal_secondary_registered-18034-2.svg" alt="TripAdvisor" /></a></li>
-                                </ul>
-                            </div>
-                            <script async src="https://www.jscache.com/wejs?wtype=cdsratingsonlynarrow&amp;uniq=907&amp;locationId=967665&amp;lang=fr&amp;border=true&amp;display_version=2" data-loadtrk onload="this.loadtrk=true"></script>
+                            <div id="TA_cdsratingsonlynarrow243" class="TA_cdsratingsonlynarrow"><ul id="krMzXIqF" class="TA_links QaPBmHoX"><li id="CpXc268wf4Kl" class="uX7GtXt19pI"><a target="_blank" href="https://www.tripadvisor.fr/Restaurant_Review-g187175-d967665-Reviews-Zenazia-Toulouse_Haute_Garonne_Occitanie.html"><img src="https://www.tripadvisor.fr/img/cdsi/img2/branding/v2/Tripadvisor_lockup_horizontal_secondary_registered-18034-2.svg" alt="TripAdvisor"/></a></li></ul></div><script async src="https://www.jscache.com/wejs?wtype=cdsratingsonlynarrow&amp;uniq=243&amp;locationId=967665&amp;lang=fr&amp;border=true&amp;shadow=true&amp;display_version=2" data-loadtrk onload="this.loadtrk=true"></script>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <section id="quint">
-            <h2>Restaurant de Quint-Fonsegrives</h2>
+        <h2><?php echo get_field("titre_restaurant_de_quint"); ?></h2>
             <div class="quintContent">
                 <div class="leftContent">
                     <div class="leftImg"></div>
