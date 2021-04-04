@@ -3,70 +3,66 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
-        <h1><?php echo esc_html( get_the_title() ); ?></h1>
-        <div class="container">
-            <div class="menu">
-            <?php
-                if(have_rows('entrees')) :
-                    while( have_rows('entrees') ) : the_row();
-                        $nom_entree = get_sub_field('nom_de_lentree');
-                        $prix_entree = get_sub_field('prix_de_lentree');
-                        $img_entree = get_sub_field('image_de_lentree');
-                        echo $nom_entree . ' ------- ' . $prix_entree . '<br>';
-                        //echo '<img src="' . $img_entree['url'] . '"/>';
-                    endwhile;
-                else :
-                    echo "Pas de menu";
-                endif;
-             ?>
-            <?php
-                if(have_rows('entrees_vapeur')) :
-                    while( have_rows('entrees_vapeur') ) : the_row();
-                        $nom_entree = get_sub_field('nom_de_lentree');
-                        $prix_entree = get_sub_field('prix_de_lentree');
-                        echo $nom_entree . ' ------- ' . $prix_entree . '<br>';
-                    endwhile;
-                else :
-                    echo "Pas de menu";
-                endif;
-             ?>
-            <?php
-                if(have_rows('salades')) :
-                    while( have_rows('salades') ) : the_row();
-                        $nom_entree = get_sub_field('nom_de_lentree');
-                        $prix_entree = get_sub_field('prix_de_lentree');
-                        echo $nom_entree . ' ------- ' . $prix_entree . '<br>';
-                    endwhile;
-                else :
-                    echo "Pas de menu";
-                endif;
-             ?>
-            <?php
-                if(have_rows('plats_cuisines')) :
-                    while( have_rows('plats_cuisines') ) : the_row();
-                        $nom_entree = get_sub_field('nom_de_lentree');
-                        $prix_entree = get_sub_field('prix_de_lentree');
-                        echo $nom_entree . ' ------- ' . $prix_entree . '<br>';
-                    endwhile;
-                else :
-                    echo "Pas de menu";
-                endif;
-             ?>
-            <?php
-                if(have_rows('mi_xao')) :
-                    while( have_rows('mi_xao') ) : the_row();
-                        $nom_entree = get_sub_field('nom_de_lentree');
-                        $prix_entree = get_sub_field('prix_de_lentree');
-                        echo $nom_entree . ' ------- ' . $prix_entree . '<br>';
-                    endwhile;
-                else :
-                    echo "Pas de menu";
-                endif;
-             ?>
-            </div>
+<main id="primary" class="main-menu">
+    <div class="menu-header">
+        <div class="logoSmall">
+            <a href="<?= get_home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/images/logoZenaziaSmall.png" /></a>
         </div>
-	</main>
+        <nav id="site-navigation" class="main-navigation">
+            <?php
+            wp_nav_menu(
+                array(
+                    'theme_location' => 'menu-1',
+                    'menu_id'        => 'primary-menu',
+                )
+            );
+            ?>
+        </nav>
+    </div>
+
+    <div class="menu-content">
+        <div class="menu-content-balma">
+            <h1>Menu Restaurant Balma</h1>
+            <?php
+            $menu_champs = array('entrees' => 'Entrées', 'entrees_vapeur' => 'Entrées vapeur', 'salades' => 'Salades', 'plats_cuisines' => 'Plats cuisinés', 'mi_xao' => 'Mi-Xao');
+
+            foreach ($menu_champs as $key => $champ) {
+                $champ_en_cours = $key;
+                print_r("<h2>" . $champ . " </h2>");
+                if (have_rows($champ_en_cours)) :
+                    while (have_rows($champ_en_cours)) : the_row();
+                        $nom =  get_sub_field('nom_de_lentree');
+                        $prix = get_sub_field('prix_de_lentree');
+                        $img = get_sub_field('image_de_lentree');
+                        echo "<div class='menu-line'><div class='menu-nom'>" . $nom . "</div><div class='menu-prix'>" . $prix . "</div><div class='menu-img'>" . $img . "</div></div>";
+                    endwhile;
+                endif;
+            }
+            ?>
+        </div>
+        <div class="chopsticksImg"></div>
+        <div class="menu-content-quint">
+            <h1>Menu Restaurant Quint-Fonsegrives</h1>
+            <?php
+            $menu_champs = array('entrees' => 'Entrées', 'entrees_vapeur' => 'Entrées vapeur', 'salades' => 'Salades', 'plats_cuisines' => 'Plats cuisinés', 'mi_xao' => 'Mi-Xao');
+
+            foreach ($menu_champs as $key => $champ) {
+                $champ_en_cours = $key;
+                print_r("<h2>" . $champ . " </h2>");
+                if (have_rows($champ_en_cours)) :
+                    while (have_rows($champ_en_cours)) : the_row();
+                        $nom =  get_sub_field('nom_de_lentree');
+                        $prix = get_sub_field('prix_de_lentree');
+                        $img = get_sub_field('image_de_lentree');
+                        echo "<div class='menu-line'><div class='menu-nom'>" . $nom . "</div><div class='menu-prix'>" . $prix . "</div><div class='menu-img'>" . $img . "</div></div>";
+                    endwhile;
+                endif;
+            }
+            ?>
+        </div>
+        <div class="hatImg"></div>
+    </div>
+</main>
 
 <?php
 get_footer();

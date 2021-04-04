@@ -1,18 +1,85 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -20,29 +87,51 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
+
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
     display: block;
 }
-ol, ul {
+
+ol,
+ul {
     list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
     quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
     content: '';
     content: none;
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -52,25 +141,30 @@ body {
     background-color: #fce9c9;
     overflow-x: hidden;
 }
+
 .bigImage {
     position: relative;
     height: 100vh;
     background: linear-gradient(180deg, rgba(255, 166, 32, 0.65) 0%, rgba(255, 255, 255, 0) 100%), url("./images/bgImageZenazia.jpg");
     background-size: cover;
 }
+
 .menu-header {
     position: relative;
     height: 50px;
 }
+
 .logoZenazia {
     position: absolute;
     top: 1vh;
     left: 8vh;
 }
+
 .logoZenazia img {
     width: 334px;
     height: 95px;
 }
+
 .main-navigation .menu-menu-header-container ul#primary-menu {
     position: relative;
     flex-direction: row;
@@ -80,6 +174,7 @@ body {
     width: 30%;
     padding-top: 20px;
 }
+
 .main-navigation .menu-menu-header-container ul#primary-menu::after {
     position: absolute;
     bottom: -13px;
@@ -90,17 +185,20 @@ body {
     left: -10%;
     right: 0;
 }
+
 .main-navigation .menu-menu-header-container ul#primary-menu li a {
     color: #F5F5F5;
     font-weight: 400;
     font-size: 22px;
     text-decoration: none;
 }
+
 .main-navigation .menu-menu-header-container ul#primary-menu li a:hover {
     position: relative;
     color: #712c2d;
     font-weight: 500;
 }
+
 .main-navigation .menu-menu-header-container ul#primary-menu li a:hover::after {
     z-index: 2;
     position: absolute;
@@ -111,22 +209,26 @@ body {
     width: 100%;
     background-color: #712c2d;
 }
+
 .main-navigation .menu-menu-header-container ul#primary-menu li.current_page_item a {
     position: relative;
     color: #712c2d;
     font-weight: 500;
 }
+
 .main-navigation .menu-menu-header-container ul#primary-menu li.current_page_item.menu-item-155 a {
     color: #F5F5F5;
     font-weight: 400;
     font-size: 22px;
     text-decoration: none;
 }
+
 .main-navigation .menu-menu-header-container ul#primary-menu li.current_page_item.menu-item-155 a::after {
     position: absolute;
     content: "";
     background: transparent;
 }
+
 .main-navigation .menu-menu-header-container ul#primary-menu li.current_page_item a::after {
     z-index: 2;
     position: absolute;
@@ -137,6 +239,7 @@ body {
     width: 100%;
     background-color: #712c2d;
 }
+
 .bigImage .introduction {
     font-weight: 300;
     position: absolute;
@@ -146,23 +249,27 @@ body {
     flex-direction: column;
     width: 25vw;
 }
+
 .bigImage .introduction .firstIntroText {
     line-height: 30px;
     font-size: 26px;
     color: #F5F5F5;
 }
+
 .bigImage .introduction .secondIntroText {
     line-height: 30px;
     margin-top: 50px;
     font-size: 26px;
     color: #F5F5F5;
 }
+
 .bigImage .introduction .discoverButtons {
     margin-top: 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
+
 .bigImage .introduction .discoverButtons a {
     display: flex;
     text-decoration: none;
@@ -183,6 +290,7 @@ body {
     position: relative;
     overflow: hidden;
 }
+
 .bigImage .introduction .discoverButtons a:before {
     content: "";
     position: absolute;
@@ -199,12 +307,17 @@ body {
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
 }
-.bigImage .introduction .discoverButtons a:hover:before, .bigImage .introduction .discoverButtons a:focus:before, .bigImage .introduction .discoverButtons a:active:before {
+
+.bigImage .introduction .discoverButtons a:hover:before,
+.bigImage .introduction .discoverButtons a:focus:before,
+.bigImage .introduction .discoverButtons a:active:before {
     right: 0;
 }
+
 .bigImage .introduction .discoverButtons a:first-child {
     margin-right: 18px;
 }
+
 .bigImage .dragonZenazia {
     font-weight: 400;
     color: #fff;
@@ -213,11 +326,13 @@ body {
     right: 5%;
     text-align: center;
 }
+
 section#restaurants {
     padding: 3% 5vw 5% 5vw;
     margin: 0 auto;
     position: relative;
 }
+
 section#restaurants .chopsticksImg {
     z-index: -1;
     position: absolute;
@@ -228,6 +343,7 @@ section#restaurants .chopsticksImg {
     background: url("./images/chopsticks.png") no-repeat;
     opacity: 0.45;
 }
+
 section#restaurants #balma h2 {
     padding-bottom: 3%;
     width: 100%;
@@ -236,21 +352,25 @@ section#restaurants #balma h2 {
     font-size: 28px;
     text-align: center;
 }
+
 section#restaurants #balma .balmaContent {
     position: relative;
     display: flex;
     flex-direction: row;
 }
+
 section#restaurants #balma .balmaContent .leftContent {
     width: 40%;
     display: flex;
     justify-content: center;
     align-self: center;
 }
+
 section#restaurants #balma .balmaContent .leftContent .timetable {
     display: flex;
     flex-direction: column;
 }
+
 section#restaurants #balma .balmaContent .leftContent .timetable .card-timetable {
     height: 50px;
     width: 200px;
@@ -263,6 +383,7 @@ section#restaurants #balma .balmaContent .leftContent .timetable .card-timetable
     justify-content: left;
     font-weight: 500;
 }
+
 section#restaurants #balma .balmaContent .rightContent .timetable .card-timetable {
     height: 50px;
     width: 200px;
@@ -274,10 +395,12 @@ section#restaurants #balma .balmaContent .rightContent .timetable .card-timetabl
     justify-content: right;
     font-weight: 500;
 }
+
 section#restaurants #balma .balmaContent .leftContent .timetable .card-timetable .hours {
     display: flex;
     flex-direction: column;
 }
+
 section#restaurants #balma .balmaContent .leftContent .timetable .card-timetable .letter-timetable {
     border-radius: 50%;
     background: #712c2d;
@@ -291,19 +414,23 @@ section#restaurants #balma .balmaContent .leftContent .timetable .card-timetable
     font-weight: 500;
     margin-left: 10px;
 }
+
 section#restaurants .leftContent .timetable .card-timetable .time-timetable {
     margin-left: 10px;
 }
+
 section#restaurants #balma .balmaContent .rightContent {
     position: relative;
     width: 60%;
 }
+
 section#restaurants #balma .balmaContent .rightContent .rightImg {
     height: 60vh;
     width: 1024px;
     background: url("./images/zenaziabalma.png") no-repeat;
     box-shadow: 5px 5px 5px 0px rgba(32, 33, 36, .28);
 }
+
 section#restaurants #balma .balmaContent .rightContent .rightTxt {
     background-color: #fff;
     position: relative;
@@ -315,6 +442,7 @@ section#restaurants #balma .balmaContent .rightContent .rightTxt {
     border-radius: 10px;
     z-index: 1;
 }
+
 section#restaurants #balma .balmaContent .rightContent .rightTxt::after {
     height: 100%;
     width: 100%;
@@ -326,15 +454,20 @@ section#restaurants #balma .balmaContent .rightContent .rightTxt::after {
     left: 35%;
     background: url("./images/bamboo.png") no-repeat;
 }
-section#restaurants #balma .balmaContent .rightContent .rightTxt .rightTxtPhone, section#restaurants #balma .balmaContent .rightContent .rightTxt .rightTxtAddress {
+
+section#restaurants #balma .balmaContent .rightContent .rightTxt .rightTxtPhone,
+section#restaurants #balma .balmaContent .rightContent .rightTxt .rightTxtAddress {
     margin-top: 15px;
     display: flex;
     align-items: center;
     color: black;
 }
-section#restaurants #balma .balmaContent .rightContent .rightTxt .rightTxtPhone img, section#restaurants #balma .balmaContent .rightContent .rightTxt .rightTxtAddress img {
+
+section#restaurants #balma .balmaContent .rightContent .rightTxt .rightTxtPhone img,
+section#restaurants #balma .balmaContent .rightContent .rightTxt .rightTxtAddress img {
     padding-right: 5px;
 }
+
 section#restaurants #balma .balmaContent .rightContent .rightTxt .bottomRightTxt {
     display: flex;
     flex-direction: row;
@@ -347,15 +480,20 @@ section#restaurants #balma .balmaContent .rightContent .rightTxt .bottomRightTxt
     margin-top: 15px;
     justify-content: space-around;
 }
+
 section#restaurants #balma .balmaContent .rightContent .rightTxt .bottomRightTxt .TA_cdsratingsonlynarrow {
     display: flex;
     flex-direction: row;
     align-content: flex-end;
 }
+
+
 /********************** QUINT *******************/
+
 section#restaurants #quint {
     margin-top: 5%;
 }
+
 section#restaurants #quint h2 {
     padding-top: 3%;
     padding-bottom: 3%;
@@ -365,11 +503,13 @@ section#restaurants #quint h2 {
     font-size: 28px;
     text-align: center;
 }
+
 section#restaurants #quint .quintContent {
     position: relative;
     display: flex;
     flex-direction: row;
 }
+
 section#restaurants #quint .hatImg {
     position: absolute;
     top: 10%;
@@ -380,9 +520,11 @@ section#restaurants #quint .hatImg {
     opacity: 0.35;
     z-index: -1;
 }
+
 section#restaurants #quint .quintContent .leftContent {
     width: 60%;
 }
+
 section#restaurants #quint .quintContent .leftContent .leftImg {
     height: 60vh;
     width: 1024px;
@@ -390,6 +532,7 @@ section#restaurants #quint .quintContent .leftContent .leftImg {
     background-position: right;
     box-shadow: 5px 5px 5px 0 rgba(32, 33, 36, .28);
 }
+
 section#restaurants #quint .quintContent .leftContent .leftTxt {
     background-color: #fff;
     position: relative;
@@ -401,20 +544,25 @@ section#restaurants #quint .quintContent .leftContent .leftTxt {
     border-radius: 10px;
     z-index: 1;
 }
-section#restaurants #quint .quintContent .leftContent .leftTxt .leftTxtPhone, section#restaurants #quint .quintContent .leftContent .leftTxt .leftTxtAddress {
+
+section#restaurants #quint .quintContent .leftContent .leftTxt .leftTxtPhone,
+section#restaurants #quint .quintContent .leftContent .leftTxt .leftTxtAddress {
     margin-top: 15px;
     display: flex;
     align-items: center;
     color: black;
 }
+
 section#restaurants #quint .quintContent .leftContent .leftTxt .leftTxtAddress span {
     overflow-wrap: break-word;
     width: 50%;
 }
+
 section#restaurants #quint .quintContent .leftContent .leftTxt .bottomLeftTxt {
     display: flex;
     flex-direction: row;
 }
+
 section#restaurants #quint .quintContent .leftContent .leftTxt .bottomLeftTxt .link-services {
     display: flex;
     flex-direction: column;
@@ -422,6 +570,7 @@ section#restaurants #quint .quintContent .leftContent .leftTxt .bottomLeftTxt .l
     margin-top: 15px;
     justify-content: space-around;
 }
+
 section#restaurants #quint .quintContent .leftContent .leftTxt::after {
     height: 100%;
     width: 100%;
@@ -433,16 +582,19 @@ section#restaurants #quint .quintContent .leftContent .leftTxt::after {
     left: 35%;
     background: url("./images/bamboo.png") no-repeat;
 }
+
 section#restaurants #quint .quintContent .rightContent {
     width: 40%;
     display: flex;
     justify-content: center;
     align-self: center;
 }
+
 section#restaurants #quint .quintContent .rightContent .timetable {
     display: flex;
     flex-direction: column;
 }
+
 section#restaurants #quint .quintContent .rightContent .timetable .card-timetable {
     height: 50px;
     width: 200px;
@@ -455,6 +607,7 @@ section#restaurants #quint .quintContent .rightContent .timetable .card-timetabl
     justify-content: left;
     font-weight: 500;
 }
+
 section#restaurants #quint .quintContent .rightContent .timetable .card-timetable .letter-timetable {
     border-radius: 50%;
     background: #712c2d;
@@ -482,21 +635,29 @@ section#restaurants #quint .quintContent .rightContent .timetable .card-timetabl
     font-weight: 500;
     margin-left: 10px;
 }
+
 section#restaurants #quint .quintContent .rightContent .timetable .card-timetable .hours {
     display: flex;
     flex-direction: column;
 }
+
 section#restaurants #quint .quintContent .rightContent .timetable .card-timetable .time-timetable {
     margin-left: 10px;
 }
+
+
 /********************** CONTACT *******************/
-body.page-template-template-contact .menu-header {
+
+body.page-template-template-contact,
+body.page-template-template-menu .menu-header {
     height: 100px;
     background-color: #382a2b;
     border-bottom: solid 5px #712c2d;
     position: relative;
 }
-body.page-template-template-contact .logoSmall img {
+
+body.page-template-template-contact,
+body.page-template-template-menu .logoSmall img {
     position: absolute;
     top: 20px;
     left: 5vh;
@@ -504,7 +665,9 @@ body.page-template-template-contact .logoSmall img {
     height: 50px;
     width: auto;
 }
-body.page-template-template-contact .container h1 {
+
+body.page-template-template-contact,
+body.page-template-template-menu .container h1 {
     padding: 30px 0;
     width: 100%;
     color: #712c2d;
@@ -512,7 +675,9 @@ body.page-template-template-contact .container h1 {
     font-size: 28px;
     text-align: center;
 }
-body.page-template-template-contact .container p.contactIntro {
+
+body.page-template-template-contact,
+body.page-template-template-menu .container p.contactIntro {
     text-align: center;
     overflow-wrap: break-word;
     width: 30%;
@@ -521,10 +686,12 @@ body.page-template-template-contact .container p.contactIntro {
     color: #712c2d;
     font-size: 17px;
 }
+
 body.page-template-template-contact .container form {
     width: 40%;
     margin: 0 auto;
 }
+
 body.page-template-template-contact .container form .rowContentForm {
     display: flex;
     flex-direction: row;
@@ -533,6 +700,7 @@ body.page-template-template-contact .container form .rowContentForm {
     justify-content: space-evenly;
     margin-bottom: 25px;
 }
+
 body.page-template-template-contact .container form input[type="text"],
 body.page-template-template-contact .container form input[type="tel"],
 body.page-template-template-contact .container form input[type="email"] {
@@ -548,6 +716,7 @@ body.page-template-template-contact .container form input[type="email"] {
     color: #712c2d;
     font-size: 15px;
 }
+
 body.page-template-template-contact .container form input[type="text"]::placeholder,
 body.page-template-template-contact .container form input[type="tel"]::placeholder,
 body.page-template-template-contact .container form input[type="email"]::placeholder,
@@ -555,15 +724,21 @@ body.page-template-template-contact .container form textarea::placeholder {
     font-family: 'Roboto';
     font-size: 15px;
 }
-body.page-template-template-contact .container form textarea::placeholder {
+
+body.page-template-template-contact .container form textarea::placeholder,
+body.page-template-template-menu .container form textarea::placeholder {
     font-family: 'Roboto';
 }
-body.page-template-template-contact .container form .footerContentForm {
+
+body.page-template-template-contact .container form .footerContentForm,
+body.page-template-template-menu .container form .footerContentForm {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-body.page-template-template-contact .container form textarea {
+
+body.page-template-template-contact .container form textarea,
+body.page-template-template-menu .container form textarea {
     font-family: 'Roboto';
     background: transparent;
     padding-top: 10px;
@@ -576,9 +751,9 @@ body.page-template-template-contact .container form textarea {
     margin: 5px 0;
     color: #712c2d;
     font-size: 15px;
-
 }
-body.page-template-template-contact .container form input[type="submit"] {
+
+body.page-template-template-menu .container form input[type="submit"] {
     background: transparent;
     font-weight: 500;
     font-family: 'Roboto';
@@ -590,22 +765,28 @@ body.page-template-template-contact .container form input[type="submit"] {
     border: solid 2px #712c2d;
     border-radius: 5px;
 }
+
 body.page-template-template-contact .container form input[type="submit"]:hover {
     background: #712c2d;
     color: #F5F5F5;
     border: solid 2px #F5F5F5;
     cursor: pointer;
 }
-body.page-template-template-contact footer {
-    position: fixed;
+
+body.page-template-template-contact footer,
+body.page-template-template-menu footer {
     left: 0;
     right: 0;
     bottom: 0;
 }
+
 body.page-template-template-contact button#scrollToTop {
     display: none;
 }
+
+
 /********************** FOOTER *******************/
+
 footer.site-footer {
     position: relative;
     color: #F5F5F5;
@@ -614,11 +795,13 @@ footer.site-footer {
     font-weight: 300;
     padding: 25px 5% 0 5%;
 }
+
 footer.site-footer .site-info .upperFooter {
     display: flex;
     flex-direction: row;
     flex: 1;
 }
+
 footer.site-footer .site-info .upperFooter .menu-footer {
     display: flex;
     flex: 1 1 10%;
@@ -626,11 +809,13 @@ footer.site-footer .site-info .upperFooter .menu-footer {
     align-items: center;
     padding: 25px;
 }
+
 footer.site-footer .site-info .upperFooter .menu-footer h3 {
     font-size: 20px;
     font-weight: 400;
     margin-bottom: 15px;
 }
+
 footer.site-footer .site-info .upperFooter .contact {
     align-items: center;
     display: flex;
@@ -638,22 +823,27 @@ footer.site-footer .site-info .upperFooter .contact {
     flex-direction: column;
     padding: 25px;
 }
+
 footer.site-footer .site-info .upperFooter .contact h3 {
     font-size: 20px;
     font-weight: 400;
     margin-bottom: 15px;
 }
+
 footer.site-footer .site-info .upperFooter .contact a {
     text-decoration: none;
     color: #f5f5f5;
 }
+
 footer.site-footer .site-info .upperFooter .contact a:hover {
     text-decoration: underline;
 }
+
 footer.site-footer .site-info .upperFooter .contact .contactBalma {
     position: relative;
     margin-bottom: 20px;
 }
+
 footer.site-footer .site-info .upperFooter .contact .contactBalma::after {
     content: '';
     position: absolute;
@@ -664,6 +854,7 @@ footer.site-footer .site-info .upperFooter .contact .contactBalma::after {
     height: 1px;
     background-color: #F5F5F5;
 }
+
 footer.site-footer .site-info .upperFooter .outro {
     font-style: italic;
     padding: 25px;
@@ -672,30 +863,36 @@ footer.site-footer .site-info .upperFooter .outro {
     flex: 1 1 25%;
     flex-direction: column;
 }
+
 footer.site-footer .site-info .upperFooter .outro h3 {
     font-style: normal;
     font-size: 20px;
     font-weight: 400;
     margin-bottom: 15px;
 }
+
 footer.site-footer .site-info ul#footer-menu {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
 footer.site-footer .site-info ul#footer-menu li a {
     color: #F5F5F5;
     text-decoration: none;
 }
+
 footer.site-footer .site-info ul#footer-menu li a:hover {
     text-decoration: underline;
 }
+
 footer.site-footer .site-info .socialMedia {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin: 20px 0;
 }
+
 footer.site-footer .site-info .socialMedia a {
     display: flex;
     flex-direction: column;
@@ -705,9 +902,11 @@ footer.site-footer .site-info .socialMedia a {
     font-size: 13px;
     padding: 0 10px;
 }
+
 footer.site-footer .site-info .socialMedia a span {
     margin-top: 5px;
 }
+
 footer.site-footer .site-info p.copyright {
     font-size: 14px;
     font-style: italic;
@@ -716,16 +915,19 @@ footer.site-footer .site-info p.copyright {
     align-items: center;
     justify-content: center;
 }
+
 footer.site-footer .site-info p.copyright a {
     padding-left: 5px;
     color: #fff;
 }
+
 footer.site-footer .site-info svg.logoKSE {
     position: absolute;
     left: 20px;
     bottom: 20px;
     height: 30px;
 }
+
 button#scrollToTop {
     color: #712c2d;
     font-size: 50px;
@@ -743,9 +945,12 @@ button#scrollToTop {
     margin: auto 0;
     bottom: 0;
 }
+
+
 /********************** DOORS *******************/
+
 #leftdoor {
-    content:'';
+    content: '';
     top: 0;
     left: 0;
     position: fixed;
@@ -759,7 +964,7 @@ button#scrollToTop {
 }
 
 #rightdoor {
-    content:'';
+    content: '';
     top: 0;
     right: 0;
     position: fixed;
@@ -772,12 +977,119 @@ button#scrollToTop {
     z-index: 3;
 }
 
-@keyframes left-to-right{
-    from{left: 0}
-    to{left: -100%}
+@keyframes left-to-right {
+    from {
+        left: 0
+    }
+    to {
+        left: -100%
+    }
 }
 
-@keyframes right-to-left{
-    from{right: 0}
-    to{right: -100%}
+@keyframes right-to-left {
+    from {
+        right: 0
+    }
+    to {
+        right: -100%
+    }
 }
+
+
+/********************** MENU *******************/
+
+.menu-content {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    /* flex: 1; */
+    align-items: center;
+    margin-bottom: 10vh;
+}
+
+.menu-content h1 {
+    font-size: 32px;
+    text-align: left;
+    margin: 1.5vw 0 1.5vw 0;
+}
+
+.menu-content h2 {
+    font-size: 24px;
+    margin: 1.5vw 0 1.5vw 0;
+    width: 25vw;
+    color: RGB(113, 44, 45);
+}
+
+.menu-content-quint,
+.menu-content-balma {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 50%;
+}
+
+.menu-content-balma::after {
+    content: "";
+    right: 0;
+    width: 1px;
+    height: 93%;
+    background: black;
+    position: absolute;
+    top: 10%;
+}
+
+.menu-content .menu-line {
+    display: flex;
+    justify-content: space-between;
+    width: 25vw;
+}
+
+.menu-content .menu-nom {
+    display: flex;
+    flex: 6;
+    justify-content: flex-start;
+    align-items: left;
+}
+
+.menu-content .menu-prix {
+    display: flex;
+    flex: 0 1 auto;
+    justify-content: flex-end;
+    align-items: right;
+}
+
+.menu-content .menu-img {
+    display: flex;
+    flex: 0 1 auto;
+    justify-content: flex-end;
+}
+
+.menu-content .hatImg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 650px;
+    width: 100vh;
+    background: url("./images/hat.png") no-repeat;
+    opacity: 0.09;
+    z-index: -1;
+}
+
+.menu-content .chopsticksImg {
+    z-index: -1;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    height: 80vh;
+    width: 80vh;
+    background-image: url("./images/chopsticks.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.09;
+}
+
+
+/********************** END MENU *******************/
