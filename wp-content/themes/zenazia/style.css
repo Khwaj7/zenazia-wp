@@ -799,12 +799,17 @@ footer.site-footer {
 footer.site-footer .site-info .upperFooter {
     display: flex;
     flex-direction: row;
-    flex: 1;
+    flex: 1 1 100%;
+}
+footer.site-footer .site-info .upperFooter .leftUpperFooter {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 50%;
 }
 
 footer.site-footer .site-info .upperFooter .menu-footer {
     display: flex;
-    flex: 1 1 10%;
+    flex: 1 1 20%;
     flex-direction: column;
     align-items: center;
     padding: 25px;
@@ -819,7 +824,7 @@ footer.site-footer .site-info .upperFooter .menu-footer h3 {
 footer.site-footer .site-info .upperFooter .contact {
     align-items: center;
     display: flex;
-    flex: 1 1 30%;
+    flex: 1 1 80%;
     flex-direction: column;
     padding: 25px;
 }
@@ -854,17 +859,21 @@ footer.site-footer .site-info .upperFooter .contact .contactBalma::after {
     height: 1px;
     background-color: #F5F5F5;
 }
-
-footer.site-footer .site-info .upperFooter .outro {
+footer.site-footer .site-info .upperFooter .rightUpperFooter {
+    display: flex;
+    flex: 1 1 50%;
+    justify-content: center;
+}
+footer.site-footer .site-info .upperFooter .rightUpperFooter .outro {
     font-style: italic;
     padding: 25px;
     display: flex;
     align-items: center;
-    flex: 1 1 25%;
+    flex: 0 0 65%;
     flex-direction: column;
 }
 
-footer.site-footer .site-info .upperFooter .outro h3 {
+footer.site-footer .site-info .upperFooter .rightUpperFooter .outro h3 {
     font-style: normal;
     font-size: 20px;
     font-weight: 400;

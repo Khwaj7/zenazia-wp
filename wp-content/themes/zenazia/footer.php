@@ -16,32 +16,36 @@
 	<button id="scrollToTop">^</button>
 	<div class="site-info">
 		<div class="upperFooter">
-			<div class="menu-footer">
-				<h3>Menu</h3>
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'footer-menu',
-					)
-				);
-				?>
-			</div>
-			<div class="contact">
-				<h3>Nous contacter</h3>
-				<div class="contactBalma">
-					<p>Balma</p>
-					<a href="tel:<?php echo get_field("telephone_balma_reel"); ?>">Téléphone : <?php echo get_field("telephone_balma"); ?></a>
+			<div class="leftUpperFooter">
+				<div class="menu-footer">
+					<h3>Menu</h3>
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'footer-menu',
+						)
+					);
+					?>
 				</div>
-				<div class="contactQuint">
-					<p>Quint Fonsegrives</p>
-					<a href="tel:<?php echo get_field("telephone_quint_reel"); ?>">Téléphone : <?php echo get_field("telephone_quint"); ?></a>
+				<div class="contact">
+					<h3>Nous contacter</h3>
+					<div class="contactBalma">
+						<p>Balma</p>
+						<a href="tel:<?php echo get_field("telephone_balma_reel"); ?>">Téléphone : <?php echo get_field("telephone_balma"); ?></a>
+					</div>
+					<div class="contactQuint">
+						<p>Quint Fonsegrives</p>
+						<a href="tel:<?php echo get_field("telephone_quint_reel"); ?>">Téléphone : <?php echo get_field("telephone_quint"); ?></a>
+					</div>
 				</div>
 			</div>
-			<div class="outro">
-				<h3>Notre service</h3>
-				<p>Notre cuisine est élaborée sur place, tout en harmonisant, la matière première, les épices, rhizomes&herbes fraîches aromatiques et médicinales. (sans glutamate).</p>
-				<p>Nos plats sont poêlés au wok dès la prise de commadne pour vos repas ou à emporter. (la liste est à votre disposition)</p>
+			<div class="rightUpperFooter">
+				<div class="outro">
+					<h3>Notre service</h3>
+					<p>Notre cuisine est élaborée sur place, tout en harmonisant, la matière première, les épices, rhizomes&herbes fraîches aromatiques et médicinales. (sans glutamate).</p>
+					<p>Nos plats sont poêlés au wok dès la prise de commadne pour vos repas ou à emporter. (la liste est à votre disposition)</p>
+				</div>
 			</div>
 		</div>
 		<!-- <div class="socialMedia">
