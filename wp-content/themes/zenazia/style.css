@@ -1,85 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -88,37 +8,21 @@ video {
     vertical-align: baseline;
 }
 
-
 /* HTML5 display-role reset for older browsers */
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display: block;
 }
 
-ol,
-ul {
+ol, ul {
     list-style: none;
 }
 
-blockquote,
-q {
+blockquote, q {
     quotes: none;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote:before, blockquote:after, q:before, q:after {
     content: '';
     content: none;
 }
@@ -140,6 +44,10 @@ body {
     height: 100%;
     background-color: #fce9c9;
     overflow-x: hidden;
+}
+
+.linkNoStyle {
+    color: inherit;
 }
 
 .bigImage {
@@ -308,9 +216,7 @@ body {
     transition-timing-function: ease-out;
 }
 
-.bigImage .introduction .discoverButtons a:hover:before,
-.bigImage .introduction .discoverButtons a:focus:before,
-.bigImage .introduction .discoverButtons a:active:before {
+.bigImage .introduction .discoverButtons a:hover:before, .bigImage .introduction .discoverButtons a:focus:before, .bigImage .introduction .discoverButtons a:active:before {
     right: 0;
 }
 
@@ -364,6 +270,37 @@ section#restaurants #balma .balmaContent .leftContent {
     display: flex;
     justify-content: center;
     align-self: center;
+    flex-direction: column;
+}
+
+section#restaurants #balma .balmaContent .leftContent .topTimetable {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+section#restaurants #balma .balmaContent .leftContent .topTimetable a.menuBtn {
+    background: transparent;
+    font-weight: 500;
+    font-family: 'Roboto';
+    margin-bottom: 10px;
+    font-size: 16px;
+    width: 200px;
+    height: 40px;
+    color: #712c2d;
+    border: solid 2px #712c2d;
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#restaurants #balma .balmaContent .leftContent .topTimetable a.menuBtn:hover {
+    background: #712c2d;
+    color: #F5F5F5;
+    border: solid 2px #F5F5F5;
+    cursor: pointer;
 }
 
 section#restaurants #balma .balmaContent .leftContent .timetable {
@@ -384,7 +321,7 @@ section#restaurants #balma .balmaContent .leftContent .timetable .card-timetable
     font-weight: 500;
 }
 
-section#restaurants #balma .balmaContent .rightContent .timetable .card-timetable {
+section#restaurants #balma .balmaContent .leftContent .timetable .card-timetable {
     height: 50px;
     width: 200px;
     background: #fff;
@@ -455,16 +392,14 @@ section#restaurants #balma .balmaContent .rightContent .rightTxt::after {
     background: url("./images/bamboo.png") no-repeat;
 }
 
-section#restaurants #balma .balmaContent .rightContent .rightTxt .rightTxtPhone,
-section#restaurants #balma .balmaContent .rightContent .rightTxt .rightTxtAddress {
+section#restaurants #balma .balmaContent .rightContent .rightTxt .rightTxtPhone, section#restaurants #balma .balmaContent .rightContent .rightTxt .rightTxtAddress {
     margin-top: 15px;
     display: flex;
     align-items: center;
     color: black;
 }
 
-section#restaurants #balma .balmaContent .rightContent .rightTxt .rightTxtPhone img,
-section#restaurants #balma .balmaContent .rightContent .rightTxt .rightTxtAddress img {
+section#restaurants #balma .balmaContent .rightContent .rightTxt .rightTxtPhone img, section#restaurants #balma .balmaContent .rightContent .rightTxt .rightTxtAddress img {
     padding-right: 5px;
 }
 
@@ -485,8 +420,8 @@ section#restaurants #balma .balmaContent .rightContent .rightTxt .bottomRightTxt
     display: flex;
     flex-direction: row;
     align-content: flex-end;
+    height: 100px;
 }
-
 
 /********************** QUINT *******************/
 
@@ -545,8 +480,7 @@ section#restaurants #quint .quintContent .leftContent .leftTxt {
     z-index: 1;
 }
 
-section#restaurants #quint .quintContent .leftContent .leftTxt .leftTxtPhone,
-section#restaurants #quint .quintContent .leftContent .leftTxt .leftTxtAddress {
+section#restaurants #quint .quintContent .leftContent .leftTxt .leftTxtPhone, section#restaurants #quint .quintContent .leftContent .leftTxt .leftTxtAddress {
     margin-top: 15px;
     display: flex;
     align-items: center;
@@ -588,11 +522,42 @@ section#restaurants #quint .quintContent .rightContent {
     display: flex;
     justify-content: center;
     align-self: center;
+    flex-direction: column;
 }
 
 section#restaurants #quint .quintContent .rightContent .timetable {
     display: flex;
     flex-direction: column;
+}
+
+section#restaurants #quint .quintContent .rightContent .topTimetable {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+section#restaurants #quint .quintContent .rightContent .topTimetable a.menuBtn {
+    background: transparent;
+    font-weight: 500;
+    font-family: 'Roboto';
+    margin-bottom: 10px;
+    font-size: 16px;
+    width: 200px;
+    height: 40px;
+    color: #712c2d;
+    border: solid 2px #712c2d;
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#restaurants #quint .quintContent .rightContent .topTimetable a.menuBtn:hover {
+    background: #712c2d;
+    color: #F5F5F5;
+    border: solid 2px #F5F5F5;
+    cursor: pointer;
 }
 
 section#restaurants #quint .quintContent .rightContent .timetable .card-timetable {
@@ -645,19 +610,23 @@ section#restaurants #quint .quintContent .rightContent .timetable .card-timetabl
     margin-left: 10px;
 }
 
-
 /********************** CONTACT *******************/
+body.page-template-template-contact .main-navigation .menu-menu-header-container ul#primary-menu li.current_page_item a, body.page-template-template-menu .main-navigation .menu-menu-header-container ul#primary-menu li.current_page_item a {
+    color: #f5f5f5;
+}
 
-body.page-template-template-contact,
-body.page-template-template-menu .menu-header {
+body.page-template-template-contact .main-navigation .menu-menu-header-container ul#primary-menu li a:hover, body.page-template-template-menu .main-navigation .menu-menu-header-container ul#primary-menu li a:hover {
+    color: #f5f5f5;
+}
+
+body.page-template-template-contact .menu-header, body.page-template-template-menu .menu-header {
     height: 100px;
     background-color: #382a2b;
     border-bottom: solid 5px #712c2d;
     position: relative;
 }
 
-body.page-template-template-contact,
-body.page-template-template-menu .logoSmall img {
+body.page-template-template-contact .logoSmall img, body.page-template-template-menu .logoSmall img {
     position: absolute;
     top: 20px;
     left: 5vh;
@@ -666,8 +635,7 @@ body.page-template-template-menu .logoSmall img {
     width: auto;
 }
 
-body.page-template-template-contact,
-body.page-template-template-menu .container h1 {
+body.page-template-template-contact .container h1, body.page-template-template-menu .container h1 {
     padding: 30px 0;
     width: 100%;
     color: #712c2d;
@@ -676,8 +644,7 @@ body.page-template-template-menu .container h1 {
     text-align: center;
 }
 
-body.page-template-template-contact,
-body.page-template-template-menu .container p.contactIntro {
+body.page-template-template-contact .container p.contactIntro, body.page-template-template-menu .container p.contactIntro {
     text-align: center;
     overflow-wrap: break-word;
     width: 30%;
@@ -701,9 +668,7 @@ body.page-template-template-contact .container form .rowContentForm {
     margin-bottom: 25px;
 }
 
-body.page-template-template-contact .container form input[type="text"],
-body.page-template-template-contact .container form input[type="tel"],
-body.page-template-template-contact .container form input[type="email"] {
+body.page-template-template-contact .container form input[type="text"], body.page-template-template-contact .container form input[type="tel"], body.page-template-template-contact .container form input[type="email"] {
     font-family: 'Roboto';
     background: transparent;
     height: 40px;
@@ -717,28 +682,22 @@ body.page-template-template-contact .container form input[type="email"] {
     font-size: 15px;
 }
 
-body.page-template-template-contact .container form input[type="text"]::placeholder,
-body.page-template-template-contact .container form input[type="tel"]::placeholder,
-body.page-template-template-contact .container form input[type="email"]::placeholder,
-body.page-template-template-contact .container form textarea::placeholder {
+body.page-template-template-contact .container form input[type="text"]::placeholder, body.page-template-template-contact .container form input[type="tel"]::placeholder, body.page-template-template-contact .container form input[type="email"]::placeholder, body.page-template-template-contact .container form textarea::placeholder {
     font-family: 'Roboto';
     font-size: 15px;
 }
 
-body.page-template-template-contact .container form textarea::placeholder,
-body.page-template-template-menu .container form textarea::placeholder {
+body.page-template-template-contact .container form textarea::placeholder, body.page-template-template-menu .container form textarea::placeholder {
     font-family: 'Roboto';
 }
 
-body.page-template-template-contact .container form .footerContentForm,
-body.page-template-template-menu .container form .footerContentForm {
+body.page-template-template-contact .container form .footerContentForm, body.page-template-template-menu .container form .footerContentForm {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-body.page-template-template-contact .container form textarea,
-body.page-template-template-menu .container form textarea {
+body.page-template-template-contact .container form textarea {
     font-family: 'Roboto';
     background: transparent;
     padding-top: 10px;
@@ -753,7 +712,7 @@ body.page-template-template-menu .container form textarea {
     font-size: 15px;
 }
 
-body.page-template-template-menu .container form input[type="submit"] {
+body.page-template-template-contact .container form input[type="submit"] {
     background: transparent;
     font-weight: 500;
     font-family: 'Roboto';
@@ -773,8 +732,8 @@ body.page-template-template-contact .container form input[type="submit"]:hover {
     cursor: pointer;
 }
 
-body.page-template-template-contact footer,
-body.page-template-template-menu footer {
+body.page-template-template-contact footer {
+    position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
@@ -783,7 +742,6 @@ body.page-template-template-menu footer {
 body.page-template-template-contact button#scrollToTop {
     display: none;
 }
-
 
 /********************** FOOTER *******************/
 
@@ -801,6 +759,7 @@ footer.site-footer .site-info .upperFooter {
     flex-direction: row;
     flex: 1 1 100%;
 }
+
 footer.site-footer .site-info .upperFooter .leftUpperFooter {
     display: flex;
     flex-direction: row;
@@ -859,11 +818,13 @@ footer.site-footer .site-info .upperFooter .contact .contactBalma::after {
     height: 1px;
     background-color: #F5F5F5;
 }
+
 footer.site-footer .site-info .upperFooter .rightUpperFooter {
     display: flex;
     flex: 1 1 50%;
     justify-content: center;
 }
+
 footer.site-footer .site-info .upperFooter .rightUpperFooter .outro {
     font-style: italic;
     padding: 25px;
@@ -916,16 +877,20 @@ footer.site-footer .site-info .socialMedia a span {
     margin-top: 5px;
 }
 
-footer.site-footer .site-info p.copyright {
+footer.site-footer .site-info .copyright {
     font-size: 14px;
     font-style: italic;
-    padding: 20px 0;
+    padding: 25px 0;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-footer.site-footer .site-info p.copyright a {
+footer.site-footer .site-info .copyright .yearCopyright {
+    padding-left: 5px;
+}
+
+footer.site-footer .site-info .copyright a {
     padding-left: 5px;
     color: #fff;
 }
@@ -954,7 +919,6 @@ button#scrollToTop {
     margin: auto 0;
     bottom: 0;
 }
-
 
 /********************** DOORS *******************/
 
@@ -1004,7 +968,6 @@ button#scrollToTop {
     }
 }
 
-
 /********************** MENU *******************/
 
 .menu-content {
@@ -1031,8 +994,7 @@ button#scrollToTop {
     color: RGB(113, 44, 45);
 }
 
-.menu-content-quint,
-.menu-content-balma {
+.menu-content-quint, .menu-content-balma {
     display: flex;
     position: relative;
     flex-direction: column;
@@ -1099,6 +1061,5 @@ button#scrollToTop {
     background-size: contain;
     opacity: 0.09;
 }
-
 
 /********************** END MENU *******************/

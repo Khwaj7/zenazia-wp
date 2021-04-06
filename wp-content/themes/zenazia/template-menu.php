@@ -23,6 +23,7 @@ get_header();
     <div class="menu-content">
         <div class="menu-content-balma">
             <h1>Menu Restaurant Balma</h1>
+            <p>Téléphone : <a class="linkNoStyle" href="tel:<?= get_field("telephone_balma_reel");?>"><?= get_field("telephone_balma");?></a></p>
             <?php
             $menu_champs = array('entrees' => 'Entrées', 'entrees_vapeur' => 'Entrées vapeur', 'salades' => 'Salades', 'plats_cuisines' => 'Plats cuisinés', 'mi_xao' => 'Mi-Xao');
 
@@ -43,6 +44,7 @@ get_header();
         <div class="chopsticksImg"></div>
         <div class="menu-content-quint">
             <h1>Menu Restaurant Quint-Fonsegrives</h1>
+            <p>Téléphone : <a class="linkNoStyle" href="tel:<?= get_field("telephone_quint_reel");?>"><?= get_field("telephone_quint");?></a></p>
             <?php
             $menu_champs = array('entrees' => 'Entrées', 'entrees_vapeur' => 'Entrées vapeur', 'salades' => 'Salades', 'plats_cuisines' => 'Plats cuisinés', 'mi_xao' => 'Mi-Xao');
 

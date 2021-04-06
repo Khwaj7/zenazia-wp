@@ -152,6 +152,39 @@ function zenazia_scripts() {
 add_action( 'wp_enqueue_scripts', 'zenazia_scripts' );
 
 /**
+ * Register our sidebars and widgetized areas.
+ *
+ */
+function arphabet_widgets_init() {
+
+	register_sidebar( array(
+		'name'          => 'Footer right sidebar',
+		'id'            => 'footer_right_1',
+		'before_widget' => '<div class="outro">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Footer left sidebar',
+		'id'            => 'footer_left_1',
+		'before_widget' => '<div class="contact">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Footer copyright sidebar',
+		'id'            => 'footer_copyright_1',
+		'before_widget' => '<span class="widgetCopyright">',
+		'after_widget'  => '</span>',
+	) );
+}
+add_action( 'widgets_init', 'arphabet_widgets_init' );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';

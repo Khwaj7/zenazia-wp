@@ -53,6 +53,9 @@ get_header();
             <h2><?php echo get_field("titre_restaurant_de_balma"); ?></h2>
             <div class="balmaContent">
                 <div class="leftContent">
+                    <div class="topTimetable">
+                        <a class="menuBtn" href="<?= get_permalink(17); ?>">Menu</a>
+                    </div>
                     <ul class="timetable">
                         <?php
                         if (have_rows('horaires_ouverture_balma')) :
@@ -124,6 +127,9 @@ get_header();
                 </div>
                 <div class="rightContent">
                     <div class="hatImg"></div>
+                    <div class="topTimetable">
+                        <a class="menuBtn" href="<?= get_permalink(17); ?>">Menu</a>
+                    </div>
                     <ul class="timetable">
                         <?php
                         if (have_rows('horaires_ouverture_quint')) :
